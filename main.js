@@ -137,8 +137,20 @@ function copy_to_clip(str)
   var total = results.childElementCount
   var verseBldr = ""
   for(var i=1; i<=total; i++)
-  {  
-    var thisVerse = document.getElementById("p"+i).textContent.substring(3);
+  { 
+    if(i<10)
+    { 
+      var thisVerse = document.getElementById("p"+i).textContent.substring(3);
+    }
+    else if (i<100)
+    {
+      var thisVerse = document.getElementById("p"+i).textContent.substring(4);
+    }
+    else
+    {
+      var thisVerse = document.getElementById("p"+i).textContent.substring(5);
+    }
+    
     verseBldr += thisVerse + "\n"; 
   }
 

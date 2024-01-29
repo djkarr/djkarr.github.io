@@ -185,7 +185,7 @@ function panel_out(p)
 function panel_click(p)
 {
   try{
-  my_fade_hide(p+'tg')
+  //my_fade_hide(p+'tg')
   document.getElementById(p+'img').src='blank4x4.png'
   tgshow(p+'bar')
   }catch(e){ex("panel_click",e)}
@@ -287,13 +287,13 @@ function setxpmenu()
 function setpanels()
 {
   document.getElementById("topbar").style.display=
-    document.data.topbar_on.value=='1'?'':'none'
+    document.data.topbar_on.value=='1'?'':''
   document.getElementById("leftbar").style.display=
-    document.data.leftbar_on.value=='1'?'':'none'
+    document.data.leftbar_on.value=='1'?'':''
   document.getElementById("rightbar").style.display=
-    document.data.rightbar_on.value=='1'?'':'none'
+    document.data.rightbar_on.value=='1'?'':''
   document.getElementById("bottombar").style.display=
-    document.data.bottombar_on.value=='1'?'':'none'
+    document.data.bottombar_on.value=='1'?'':''
 }
 ////////////////////////////////////////////////////////////////////
 // Go to another page if specified.
